@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./index.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <title>Slide image</title>
+    </head>
+    <body>
+        <div class="container">
+            <div id="slide">
+                <div class="item"
+                    style="background-image: url(./public/img/ocean.jpg);">
+                    <div class="content">
+                        <div class="name">OCEAN</div>
+                        <div class="des">Ocean (đại dương) là vùng nước mặn rộng
+                            lớn bao phủ khoảng 71% bề mặt Trái Đất. Đại dương là
+                            nguồn sống quan trọng cho nhiều loài sinh vật, điều
+                            hòa khí hậu toàn cầu, và là nơi chứa đựng lượng lớn
+                            đa dạng sinh học</div>
+                        <button>See More</button>
+                    </div>
+                </div>
+                <div class="item"
+                    style="background-image: url(./public/img/forest.jpg);">
+                    <div class="content">
+                        <div class="name">FOREST</div>
+                        <div class="des">Forest" (rừng) là một vùng đất lớn phủ
+                            đầy cây cối, thực vật và động vật hoang dã. Rừng
+                            thường được chia thành nhiều loại khác nhau, bao gồm
+                            rừng mưa nhiệt đới, rừng ôn đới, rừng taiga, và rừng
+                            khô nhiệt đới, tùy thuộc vào khí hậu và địa lý của
+                            khu vực</div>
+                        <button>See More</button>
+                    </div>
+                </div>
+                <div class="item"
+                    style="background-image: url(./public/img/desert.jpg);">
+                    <div class="content">
+                        <div class="name">DESERT</div>
+                        <div class="des">Desert (sa mạc) là khu vực rộng lớn,
+                            khô cằn, có lượng mưa rất ít, thường dưới 250 mm mỗi
+                            năm. Do thiếu nước, sa mạc có ít thảm thực vật và
+                            động vật, nhưng các loài sinh vật sống ở đây thường
+                            có khả năng thích nghi tốt với điều kiện khắc
+                            nghiệt. Sa mạc có thể có nhiệt độ rất cao vào ban
+                            ngày và lạnh vào ban đêm</div>
+                        <button>See More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="prev"><i
+                        class="fa-solid fa-angle-left"></i></button>
+                <button id="next"><i
+                        class="fa-solid fa-angle-right"></i></button>
+            </div>
+        </div>
+    </body>
+    <script>
+      document.getElementById('next').onclick = function(){
+    let lists = document.querySelectorAll('.item');
+    document.getElementById('slide').appendChild(lists[0]);
+}
+document.getElementById('prev').onclick = function(){
+    let lists = document.querySelectorAll('.item');
+    document.getElementById('slide').prepend(lists[lists.length - 1]);
+}
+  
+</script>
+</html>
